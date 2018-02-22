@@ -39,15 +39,18 @@ git push --set-upstream origin master
 git push 
 
 #Stretch
-sudo apt-get install mariadb-client mariadb-server
+sudo apt-get -y install apache2
+sudo apt-get -y install mariadb-server
+mysql_secure_installation
 mysql -u root -p
-CREATE DATABASE newdb;
-CREATE USER 'username'@'localhost' IDENTIFIED BY 'userpassword';
-GRANT ALL PRIVILEGES ON newdb.* to 'username'@'localhost';
+USE mysql;
+SELECT User, Host, plugin FROM mysql.user;
+CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
+GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
+UPDATE user SET plugin='mysql_native_password' WHERE User='admin';
 FLUSH PRIVILEGES;
 quit
-sudo apt-get install php7.0 php7.0-mysql
-sudo apt-get install apache2 apache2-mod-php7.0
+sudo apt-get -y install php php-mysql
 sudo apt-get install phpmyadmin
 
 #jessie
