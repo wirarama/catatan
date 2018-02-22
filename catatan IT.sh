@@ -48,8 +48,8 @@ SELECT User, Host, plugin FROM mysql.user;
 CREATE USER 'admin'@'localhost' IDENTIFIED BY 'admin';
 GRANT ALL PRIVILEGES ON *.* TO 'admin'@'localhost';
 UPDATE user SET plugin='mysql_native_password' WHERE User='admin';
+UPDATE user SET plugin='mysql_native_password' WHERE User='phpmyadmin';
 FLUSH PRIVILEGES;
-quit
 sudo apt-get -y install php php-mysql
 sudo apt-get install phpmyadmin
 
