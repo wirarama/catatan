@@ -19,6 +19,15 @@ network={
     psk="testingPassword"
 }
 
+#raspi os
+country=ID
+ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=netdev
+update_config=1
+network={
+ssid="testing"
+psk="testingPassword"
+}
+
 #enable ssh
 buat file namanya ssh di boot
 
