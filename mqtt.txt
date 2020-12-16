@@ -1,0 +1,5 @@
+sudo apt-get install mosquitto mosquitto-clients
+mosquitto -d
+sudo systemctl enable mosquitto.service
+mosquitto_sub -t test
+mosquitto_pub -t laptopout -m "test"
