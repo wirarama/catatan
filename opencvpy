@@ -10,3 +10,4 @@ LD_PRELOAD=/usr/lib/arm-linux-gnueabihf/libatomic.so.1.2.0 python3
  
 untuk install di cgi-bin gunakan
 sudo pip3 install opencv-python==3.4.6.27
+/usr/lib/cgi-bin/ #lokasi cgi-bin
